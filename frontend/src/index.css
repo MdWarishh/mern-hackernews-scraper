@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -108,4 +111,13 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+}
+button {
+  width: 100%;
+  padding: 10px;
 }

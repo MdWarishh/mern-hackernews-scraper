@@ -64,3 +64,14 @@ export const toggleBookmark = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+export const getBookmarks = async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id).populate("bookmarks");
+
+    res.json(user.bookmarks);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
